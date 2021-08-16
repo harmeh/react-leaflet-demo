@@ -1,10 +1,12 @@
 import React from 'react';
 import './index.css';
 
+
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
 
 import {
   MapContainer,
@@ -20,16 +22,19 @@ import {
   LayersControl,
 } from 'react-leaflet';
 
+
 import 'leaflet-draw';
 import { EditControl } from 'react-leaflet-draw';
 import 'leaflet-draw/dist/leaflet.draw.css';
 
+
+
 import { useState } from 'react';
+
 
 //dummy data
 import datas from '../../data/data.json';
 console.log(datas);
-
 
 
 
@@ -103,23 +108,6 @@ const MapComponent = (props: MapComponentProps) => {
   };
 
   //--------------------------GeoJSON---End-------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 
 
 
@@ -198,18 +186,11 @@ const MapComponent = (props: MapComponentProps) => {
           />
         </LayersControl.BaseLayer>
 
+
         <LayersControl.BaseLayer name='OpenStreetMap.Mapnik'>
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-          />
-        </LayersControl.BaseLayer>
-
-
-        <LayersControl.BaseLayer name='OpenStreetMap.BlackAndWhite'>
-          <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url='https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
           />
         </LayersControl.BaseLayer>
 
@@ -243,6 +224,113 @@ const MapComponent = (props: MapComponentProps) => {
         </LayersControl.BaseLayer>
 
         
+
+
+
+
+
+
+
+
+
+
+
+        <LayersControl.BaseLayer name='OpenStreetMap Standard tile layer'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+          />
+        </LayersControl.BaseLayer>
+
+        <LayersControl.BaseLayer name='Humanitarian focused OSM base layer'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'
+          />
+        </LayersControl.BaseLayer>
+
+
+        <LayersControl.BaseLayer name='OSM France'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png'
+          />
+        </LayersControl.BaseLayer>
+
+
+        <LayersControl.BaseLayer name='wmflabs Hike Bike'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png'
+          />
+        </LayersControl.BaseLayer>
+
+
+        <LayersControl.BaseLayer name='wmflabs Hillshading'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='http://tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png'
+          />
+        </LayersControl.BaseLayer>
+
+
+        <LayersControl.BaseLayer name='wmflabs OSM B&W'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png'
+          />
+        </LayersControl.BaseLayer>
+
+
+        <LayersControl.BaseLayer name='wmflabs OSM no labels'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://tiles.wmflabs.org/osm-no-labels/{z}/{x}/{y}.png'
+          />
+        </LayersControl.BaseLayer>
+
+        <LayersControl.BaseLayer name='Thunderforest Landscape'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='http://tile.thunderforest.com/landscape/{z}/{x}/{y}.png'
+          />
+        </LayersControl.BaseLayer>
+
+        <LayersControl.BaseLayer name='Öpnvkarte Transport map'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='http://tile.memomaps.de/tilegen/{z}/{x}/{y}.png'
+          />
+        </LayersControl.BaseLayer>
+
+        <LayersControl.BaseLayer name='soviet military topo'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://{s}.tile.bbbike.org/cgi-bin/tapp/tilecache.py/1.0.0/topomapper_v2/{z}/{x}/{y}.jpg'
+          />
+        </LayersControl.BaseLayer>
+
+        <LayersControl.BaseLayer name='here WeGo satellite.day 256'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://3.aerial.maps.api.here.com/maptile/2.1/maptile/newest/satellite.day/{z}/{x}/{y}/256/png8?app_id=xWVIueSv6JL0aJ5xqTxb&token=djPZyynKsbTjIUDOBcHZ2g&lg=ENG'
+          />
+        </LayersControl.BaseLayer>
+
+        <LayersControl.BaseLayer name='here WeGo satellite.day 512'>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://3.aerial.maps.api.here.com/maptile/2.1/maptile/newest/satellite.day/{z}/{x}/{y}/512/png8?app_id=xWVIueSv6JL0aJ5xqTxb&token=djPZyynKsbTjIUDOBcHZ2g&lg=ENG'
+          />
+        </LayersControl.BaseLayer>
+
+
+
+
+
+
+
+
 
 
 

@@ -1,14 +1,19 @@
 import React from 'react';
-import { MapC } from "./components";
+import { MapC, MapC2 } from "./components";
 
 
 function App() {
   return (
-    <MapC
-      key={Math.random()}
-      center={{ lat: 45.3 , lng: -75.6 }}
-      zoom={10}
-    ></MapC>
+    <>
+      <MapC2
+      ></MapC2>
+
+      {/* <MapC
+        key={Math.random()}
+        center={{ lat: 45.3 , lng: -75.6 }}
+        zoom={10}
+      ></MapC> */}
+    </>
   );
 }
 
